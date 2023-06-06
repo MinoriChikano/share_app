@@ -36,6 +36,10 @@ class PicturesController < ApplicationController
     end
   end
 
+  def confirm
+    @picture = Picture.new(picture_params)
+  end
+
   private
 
   def picture_params
