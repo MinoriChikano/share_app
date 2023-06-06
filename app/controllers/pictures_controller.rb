@@ -38,6 +38,7 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = Picture.new(picture_params)
+    render :new if @picture.invalid?
   end
 
   private
