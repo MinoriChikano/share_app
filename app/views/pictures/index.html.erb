@@ -8,6 +8,7 @@
 <% @pictures.each do |picture| %>
   <tr>
     <td><%= pictureg.content %></td>
+    <td><%= link_to '詳細を確認する', picture_path(picture.id) %></td>
   </tr>
 <% end %>
 </table>
