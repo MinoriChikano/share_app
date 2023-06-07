@@ -25,11 +25,12 @@ class PicturesController < ApplicationController
   end
 
   def destroy
+    @picture.destroy
     redirect_to pictures_path, notice:"削除しました！"
   end
 
   def update
-    if @picture.update(picuture_params)
+    if @picture.update(picture_params)
       redirect_to pictures_path, notice: "編集しました！"
     else
       render :edit
