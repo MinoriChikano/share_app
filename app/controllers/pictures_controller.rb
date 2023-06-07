@@ -12,7 +12,7 @@ class PicturesController < ApplicationController
   def create
     @picture = current_user.pictures.build(picture_params)
     if @picture.save
-    ContactMailer.picture_mail(@picture).deliver
+    PictureMailer.picture_mail(@picture).deliver
     redirect_to pictures_path, notice: "作成完了"
     else
       render :new
