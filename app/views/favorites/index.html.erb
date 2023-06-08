@@ -2,10 +2,10 @@
 
   <% @favorites.each do |favorite| %>
     <div>
-        <th> text: </th>
-        <p><%= favorite.picture.content %></p>
-        <th> image: </th>
-        <p><%= image_tag favorite.picture.image.url if favorite.picture.image.present? %></p>
+      <th> text: </th>
+      <p><%= favorite.picture.content %></p>
+      <th> image: </th>
+      <p><%= image_tag favorite.picture.image.url if favorite.picture.image.present? %></p>
     </div>
   <% end %>
 
