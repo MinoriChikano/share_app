@@ -1,6 +1,8 @@
-<h1><%= @user.name %>のページ</h1>
+<p><%= @user.name %>のページ</p>
 
-<%= image_tag @user.avatar.url if @user.avatar.present? %>
+<table>
+<td><%= image_tag @user.avatar.url if @user.avatar.present? %></td>
+</table>
 
 <p>メールアドレス: <%= @user.email %></p>
 
