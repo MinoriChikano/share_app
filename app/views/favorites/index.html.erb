@@ -1,4 +1,4 @@
-<p>お気に入り一覧</p>
+<p>お気に入り</p>
 
 <table>
   <% @favorites.each do |favorite| %>
@@ -8,3 +8,5 @@
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'Back', pictures_path %>
