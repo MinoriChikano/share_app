@@ -1,20 +1,19 @@
-<p>一覧</p>
-
 <p><%= notice %></p>
 
 <table>
-  <tr>
-    <th>内容</th>
-  </tr>
+<%= link_to '新しく投稿する', new_picture_path %>
 
 <% @pictures.each do |picture| %>
   <tr>
+    <td>name:</td>
     <td><%= picture.user.name %></td>
+    <td>contents:</td>
     <td><%= picture.content %></td>
-    <td><%= link_to '詳細を確認する', picture_path(picture.id) %></td>
+    <td>詳細👉</td>
+    <td><%= link_to '📷', picture_path(picture.id) %></td>
     <% if picture.user == current_user %>
-      <td><%= link_to "ブログを編集する", edit_picture_path(picture.id) %></td>
-      <td><%= link_to 'ブログを削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+      <td><%= link_to "✒️EDIT🖊️", edit_picture_path(picture.id) %></td>
+      <td><%= link_to '❌DELET❌', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
     <% else %>
       <td></td>
       <td></td>
@@ -22,5 +21,3 @@
   </tr>
 <% end %>
 </table>
-
-<%= link_to '新しく投稿する', new_picture_path %>
