@@ -1,15 +1,17 @@
 <p><%= notice %></p>
 
-<table>
 <%= link_to '新しく投稿する', new_picture_path %>
 
 <% @pictures.each do |picture| %>
+  <div class = "index">
+  <table>
+  <br>
   <tr>
-    <td>name:</td>
+    <th>name:</th>
     <td><%= picture.user.name %></td>
-    <td>contents:</td>
+    <th>contents:</th>
     <td><%= picture.content %></td>
-    <td>詳細👉</td>
+    <th>詳細👉</th>
     <td><%= link_to '📷', picture_path(picture.id) %></td>
     <% if picture.user == current_user %>
       <td><%= link_to "✒️EDIT🖊️", edit_picture_path(picture.id) %></td>
@@ -19,5 +21,6 @@
       <td></td>
     <% end %>
   </tr>
+  </table>
+  </div>
 <% end %>
-</table>
