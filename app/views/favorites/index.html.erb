@@ -1,11 +1,12 @@
 <p>お気に入り</p>
 
-<table>
   <% @favorites.each do |favorite| %>
-    <tr>
-        <td><%= image_tag favorite.picture.image.url %></td>
-    </tr>
+    <div>
+        <th> text: </th>
+        <p><%= favorite.picture.content %></p>
+        <th> image: </th>
+        <p><%= image_tag favorite.picture.image.url if favorite.picture.image.present? %></p>
+    </div>
   <% end %>
-</table>
 
-<%= link_to 'Back', pictures_path %>
+<%= link_to 'top', pictures_path %>
