@@ -15,7 +15,7 @@
     <td><%= link_to '📷', picture_path(picture.id) %></td>
     <% if picture.user == current_user %>
       <td><%= link_to "✒️EDIT🖊️", edit_picture_path(picture.id) %></td>
-      <td><%= link_to '❌DELET❌', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+      <td><%= link_to '❌DELETE❌', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
     <% else %>
       <td></td>
       <td></td>
