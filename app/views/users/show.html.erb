@@ -5,6 +5,7 @@
 </table>
 
 <p>メールアドレス: <%= @user.email %></p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if current_user.id == @user.id %>
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<% end %>
 <%= link_to 'Top', pictures_path %>
