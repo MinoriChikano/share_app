@@ -3,23 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
-
 gem 'rails', '~> 6.1.6'
-
 gem 'pg', '~> 1.1'
-
 gem 'puma', '~> 5.0'
-
 gem 'sass-rails', '>= 6'
-
 gem 'webpacker', '~> 5.0'
-
 gem 'turbolinks', '~> 5'
-
 gem 'jbuilder', '~> 2.7'
-
 gem 'bcrypt'
-
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
